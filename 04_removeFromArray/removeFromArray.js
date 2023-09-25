@@ -1,11 +1,11 @@
-const removeFromArray = function(list, numToRemove) {
+const removeFromArray = function(list, ...numToRemove) {
+    ans = []
     for (let i = 0; i < list.length; i++) {
-        if (list[i] == numToRemove) {
-            list.splice(i, 1)
-            break
+        if (!numToRemove.includes(list[i])) {
+            ans.push(list[i])
         }
     }
-    return list
+    return ans
 };
 
 // Do not edit below this line
